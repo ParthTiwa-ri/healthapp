@@ -7,28 +7,16 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-
-const data = [
-  {
-    date: "2023-04-01",
-    weight: 40,
-  },
-  {
-    date: "2023-04-07",
-    weight: 60,
-  },
-  {
-    date: "2023-04-09",
-    weight: 50,
-  },
-];
+import { useMedication } from "../context/medicineContext";
 
 export default function LineChartComponent() {
+  const { weightData } = useMedication();
+
   return (
     <LineChart
       width={500}
       height={300}
-      data={data}
+      data={weightData}
       margin={{
         top: 5,
         right: 30,

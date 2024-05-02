@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import Button from "../ui/Button";
 
 const buttonData = [
-  { name: "Manage Medications", path: "/meditionform" },
-  { name: "Health Checkup", path: "/health" },
-  { name: "Lifesytle Management", path: "/test" },
+  { name: "Register", path: "/register" },
+  { name: "Login", path: "/Login" },
 ];
 
 function Homepage() {

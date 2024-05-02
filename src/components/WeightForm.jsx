@@ -2,15 +2,18 @@ import { useForm } from "react-hook-form";
 import { useMedication } from "../context/medicineContext";
 import Button from "../ui/Button";
 import { getCurrentDate } from "../utils/helper";
+import { useNavigate } from "react-router-dom";
 
 const WeightTracker = () => {
   const { register, handleSubmit, reset } = useForm();
   const { setWeightData } = useMedication();
+  const navigate = useNavigate();
 
   function onSubmit(data) {
     const newEntry = { date: data.date, weight: data.weight };
     setWeightData((prevData) => [...prevData, newEntry]);
     reset();
+    navigate("/dashboard");
   }
 
   return (

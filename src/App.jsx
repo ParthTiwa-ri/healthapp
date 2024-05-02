@@ -3,7 +3,11 @@ import Homepage from "./components/Homepage";
 import MedicationReminderForm from "./components/MedicationReminderForm";
 import MedicineReminder from "./components/Dashboard";
 import WeightTracker from "./components/WeightForm";
-import BarChartComponent from "./components/Barchart";
+// import BarChartComponent from "./components/Barchart";
+
+import AppointmentForm from "./components/AppointmentForm";
+import SignupForm from "./components/SignupForm";
+import LoginForm from "./components/Login";
 
 function App() {
   return (
@@ -12,8 +16,11 @@ function App() {
       <Route path="/meditionform" element={<MedicationReminderForm />} />
       <Route path="/dashboard" element={<MedicineReminder />} />
       <Route path="/weightform" element={<WeightTracker />} />
+      <Route path="/login" element={<LoginForm />} />
+      <Route path="/register" element={<SignupForm />} />
+      <Route path="/appointment" element={<AppointmentForm />} />
 
-      <Route path="test" element={<BarChartComponent />} />
+      <Route path="test" element={<SignupForm />} />
     </Routes>
   );
 }

@@ -5,7 +5,7 @@ function Button({ children, width }) {
   return (
     <button
       className={clsx(
-        "p-3 outline-none hover:opacity-75 transition bg-accent/75 rounded-md",
+        "p-3 outline-none hover:opacity-75 min-w-32 transition bg-accent/75 rounded-md",
         {
           "w-full": width === "full",
         }
